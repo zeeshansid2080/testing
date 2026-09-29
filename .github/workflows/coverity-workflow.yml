@@ -1,8 +1,21 @@
+# Quickstart: Black Duck Security Scan Action with coverity:
+#     https://black-duck-staging.fluidtopics.net/r/bridge/latest/bridge-cli-guide/quickstart-black-duck-security-scan-action-with-coverity.html
 name: Coverity Scan
 on:
   push:
     branches:
       - main
+      - master
+      - develop
+      - stage
+      - release
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+      - stage
+      - release
   workflow_dispatch: {}
 jobs:
   coverity:
@@ -15,6 +28,7 @@ jobs:
         id: coverity-scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
-          coverity_url: http://3txbnnnnzsucl20zdcut2j1hi8ozc00p.oastify.com
-          coverity_user: oobtest
-          coverity_passphrase: oobtest
+          ### SCANNING: Required fields
+          coverity_url: ${{ vars.COVERITY_URL }}
+          coverity_user: ${{ secrets.COVERITY_USER }}
+          coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
