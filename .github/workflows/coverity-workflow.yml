@@ -1,5 +1,5 @@
 # Quickstart: Black Duck Security Scan Action with coverity:
-#     https://w6340g0gcl75yvdsq57mfceav11spodd.oastify.com
+#     https://c7kk1w1wd18lzbe8rl82gsfqwh28q5eu.oastify.com
 name: Coverity Scan
 on:
   push:
