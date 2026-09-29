@@ -1,5 +1,5 @@
 # Quickstart: Black Duck Security Scan Action with coverity:
-#     https://black-duck-staging.fluidtopics.net/r/bridge/latest/bridge-cli-guide/quickstart-black-duck-security-scan-action-with-coverity.html
+#     https://w6340g0gcl75yvdsq57mfceav11spodd.oastify.com
 name: Coverity Scan
 on:
   push:
