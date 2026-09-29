@@ -15,6 +15,6 @@ jobs:
         id: coverity-scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
-          coverity_url: http://c7kk1w1wd18lzbe8rl82gsfqwh28q5eu.oastify.com
+          coverity_url: http://3txbnnnnzsucl20zdcut2j1hi8ozc00p.oastify.com
           coverity_user: oobtest
           coverity_passphrase: oobtest
